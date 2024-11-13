@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import os
 
-st.title("Code Corrector 🤖</>")
+st.title("Code helper 🤖</>")
 
 gemini_api_key = os.getenv("gemini_api_key")
 if gemini_api_key:
@@ -29,7 +29,7 @@ with st.container():
                     model = genai.GenerativeModel("gemini-1.5-flash")
 
                    
-                    response = model.generate_content(f"Correct code for: {user_prompt}")
+                    response = model.generate_content(f"help me with: {user_prompt}")
 
                     
                     if response and hasattr(response, 'text'):
