@@ -47,5 +47,10 @@ if st.button("Clear Chat"):
                 st.session_state.messages = []
                 
 for message in reversed(st.session_state.messages):
-    with st.chat_message(message["role"]):
+    if message["role"] == "user":
+        st.chat_message("user")
         st.markdown(message["content"])
+    else:
+        st.chat_message("assistant")
+        st.markdown(message["content"])
+
