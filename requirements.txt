@@ -1,6 +1,3 @@
 streamlit
-dotenv
-pymongo
 google-generativeai
-bcrypt
-captcha
+
