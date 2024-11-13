@@ -15,9 +15,6 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 
-
-
-
 with st.container():
     user_prompt = st.text_input("Enter your query", placeholder="Python code says hello world")
     
