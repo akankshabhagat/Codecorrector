@@ -43,7 +43,7 @@ with st.container():
         else:
             st.warning("Please enter a code snippet before searching.")
 
-if st.button("Clear Chat"):
+if st.button("Clear history"):
                 st.session_state.messages = []
                 
 for message in reversed(st.session_state.messages):
