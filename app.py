@@ -29,7 +29,7 @@ with st.container():
                     model = genai.GenerativeModel("gemini-1.5-flash")
 
                    
-                    response = model.generate_content(f"help me with: {user_prompt}")
+                    response = model.generate_content(f"what is: {user_prompt}")
 
                     
                     if response and hasattr(response, 'text'):
