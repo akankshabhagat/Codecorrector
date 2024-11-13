@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import os
 
-st.title("Code helper 🤖</>")
+st.title("Code Helper 🤖</>")
 
 gemini_api_key = os.getenv("gemini_api_key")
 if gemini_api_key:
@@ -47,10 +47,5 @@ if st.button("Clear Chat"):
                 st.session_state.messages = []
                 
 for message in reversed(st.session_state.messages):
-    if message["role"] == "user":
-        st.chat_message("user")
+    with st.chat_message(message["role"]):
         st.markdown(message["content"])
-    else:
-        st.chat_message("assistant")
-        st.markdown(message["content"])
-
